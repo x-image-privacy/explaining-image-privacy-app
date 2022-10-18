@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Heading, Text, VStack } from '@chakra-ui/react';
@@ -7,7 +8,7 @@ import MoreInfo from './components/MoreInfo';
 import AppBar from './components/common/AppBar';
 import { MAIN_CONTAINER_CY, MAIN_HEADING_CY } from './config/selectors';
 
-function App() {
+const App: FC = () => {
   const { t } = useTranslation();
 
   return (
@@ -24,6 +25,6 @@ function App() {
       <CategoryExplanations />
     </VStack>
   );
-}
+};
 
 export default App;
