@@ -1,0 +1,46 @@
+name: Cypress Tests
+
+on: [push]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      # Install dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: cypress run
+        uses: cypress-io/github-action@v4.2.0
+        with:
+          install-command: yarn --frozen-lockfile --silent
+          build: yarn build
+          start: yarn start:ci
+
+      - name: upload screenshots
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+      # Test run video was always captured, so this action uses "always()" condition
+      - name: upload videos
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
+
+      - name: report coverage
+        run: |
+          echo Total coverage $(cat coverage/coverage-summary.json | jq .total.lines.pct)
+
+          curl "https://${GIT_USER}:${GIT_TOKEN}@api.github.com/repos/${ORG_NAME}/${PROJECT_NAME}/statuses/${COMMIT_SHA}" -d "{\"state\": \"${STATE}\",\"target_url\": \"https://github.com/${ORG_NAME}/${PROJECT_NAME}/pull/${PULL_NUMBER}/checks?check_run_id=${RUN_ID}\",\"description\": \"${total}%\",\"context\": \"code cov\"}"
+        env:
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
+          GIT_USER: ${{ secrets.GIT_USER }}
+          ORG_NAME: ${{ secrets.ORG_NAME }}
+          PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
+          COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
+          PULL_NUMBER: ${{ github.event.pull_request.number }}
+          RUN_ID: ${{ github.run_id }}
