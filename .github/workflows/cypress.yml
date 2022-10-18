@@ -37,15 +37,14 @@ jobs:
         run: |
           total=$(cat coverage/coverage-summary.json | jq .total.lines.pct)
           echo Total coverage ${total}
-          curl \
+          curl -S -s \
             -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${GITHUB_TOKEN}" \
             https://api.github.com/repos/${REPO_PATH}/statuses/${COMMIT_SHA} \
-            -d "{\"state\":\"success\",\"target_url\":\"https://github.com/${REPO_PATH}/pull/${PULL_NUMBER}/checks?check_run_id=${RUN_ID}\",\"description\":\"${total}%\",\"context\":\"code-coverage\"}"
+            -d "{\"state\":\"success\",\"target_url\":\"https://github.com/${REPO_PATH}/actions/runs/${RUN_ID}\",\"description\":\"${total}%\",\"context\":\"code-coverage\"}"
         env:
           GITHUB_TOKEN: ${{ github.token }}
           REPO_PATH: ${{ github.repository }}
           COMMIT_SHA: ${{ github.sha }}
-          PULL_NUMBER: ${{ github.event.pull_request.number }}
           RUN_ID: ${{ github.run_id }}
