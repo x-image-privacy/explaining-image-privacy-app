@@ -1,0 +1,10 @@
+{
+  "translations": {
+    "MAIN_HEADING": "Sensibilisation à la vie privée dans les images",
+    "MORE_INFO_BUTTON": "Obtenir plus d'informations",
+    "MORE_INFO_MODAL_TITLE": "Plus d'informations",
+    "MORE_INFO_CONTENT": "Ce projet cherche à éduquer et sensibiliser les utilisateurs des réseaux sociaux aux concepts de vie privée dans les images. Cet outils propose des visualisations qui permettent d'aider l'assimilation de ces concepts.",
+    "EDITING_SHORTCUT": "Pour éditer ce document, utilisez",
+    "CLOSE_BUTTON": "Fermer"
+  }
+}
