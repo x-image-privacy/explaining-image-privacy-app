@@ -42,7 +42,7 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${GITHUB_TOKEN}" \
             https://api.github.com/repos/${REPO_PATH}/statuses/${COMMIT_SHA} \
-            -d '{"state":"success","target_url":"https://github.com/${REPO_PATH}/pull/${PULL_NUMBER}/checks?check_run_id=${RUN_ID}","description":"${total}%","context":"code-coverage"}'
+            -d "{\"state\":\"success\",\"target_url\":\"https://github.com/${REPO_PATH}/pull/${PULL_NUMBER}/checks?check_run_id=${RUN_ID}\",\"description\":\"${total}%\",\"context\":\"code-coverage\"}"
         env:
           GITHUB_TOKEN: ${{ github.token }}
           REPO_PATH: ${{ github.repository }}
