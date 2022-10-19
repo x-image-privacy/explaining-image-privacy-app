@@ -16,6 +16,8 @@ jobs:
           install-command: yarn --frozen-lockfile --silent
           build: yarn build
           start: yarn start:ci
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 180
 
       - name: upload screenshots
         uses: actions/upload-artifact@v2
@@ -33,14 +35,16 @@ jobs:
 
       - name: report coverage
         run: |
-          echo Total coverage $(cat coverage/coverage-summary.json | jq .total.lines.pct)
-
-          curl "https://${GIT_USER}:${GIT_TOKEN}@api.github.com/repos/${ORG_NAME}/${PROJECT_NAME}/statuses/${COMMIT_SHA}" -d "{\"state\": \"${STATE}\",\"target_url\": \"https://github.com/${ORG_NAME}/${PROJECT_NAME}/pull/${PULL_NUMBER}/checks?check_run_id=${RUN_ID}\",\"description\": \"${total}%\",\"context\": \"code cov\"}"
+          total=$(cat coverage/coverage-summary.json | jq .total.lines.pct)
+          echo Total coverage ${total}
+          curl -S -s \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+            https://api.github.com/repos/${REPO_PATH}/statuses/${COMMIT_SHA} \
+            -d "{\"state\":\"success\",\"target_url\":\"https://github.com/${REPO_PATH}/actions/runs/${RUN_ID}\",\"description\":\"${total}%\",\"context\":\"code-coverage\"}"
         env:
-          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
-          GIT_USER: ${{ secrets.GIT_USER }}
-          ORG_NAME: ${{ secrets.ORG_NAME }}
-          PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
-          COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
-          PULL_NUMBER: ${{ github.event.pull_request.number }}
+          GITHUB_TOKEN: ${{ github.token }}
+          REPO_PATH: ${{ github.repository }}
+          COMMIT_SHA: ${{ github.sha }}
           RUN_ID: ${{ github.run_id }}

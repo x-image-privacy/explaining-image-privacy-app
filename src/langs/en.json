@@ -1,0 +1,10 @@
+{
+  "translations": {
+    "MAIN_HEADING": "Explaining Image Privacy",
+    "MORE_INFO_BUTTON": "Get more info",
+    "MORE_INFO_MODAL_TITLE": "More information",
+    "MORE_INFO_CONTENT": "This project is aimed at allowing users to explore image privacy concepts. This tool provides visualisations to help this understanding.",
+    "EDITING_SHORTCUT": "To edit this document use",
+    "CLOSE_BUTTON": "Close"
+  }
+}
