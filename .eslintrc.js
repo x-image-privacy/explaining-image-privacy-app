@@ -11,5 +11,8 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint'],
-  rules: {},
+  rules: {
+    // allow using JSX without explicitly importing React
+    'react/react-in-jsx-scope': 'off',
+  },
 };
