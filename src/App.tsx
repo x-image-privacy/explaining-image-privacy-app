@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Heading, Text, VStack } from '@chakra-ui/react';
 
 import CategoryExplanations from './components/CategoryExplanations';
+import DisplayImage from './components/DisplayImage';
 import MoreInfo from './components/MoreInfo';
 import AppBar from './components/common/AppBar';
 import { MAIN_CONTAINER_CY, MAIN_HEADING_CY } from './config/selectors';
@@ -22,6 +23,7 @@ const App: FC = () => {
         others.
       </Text>
       <MoreInfo />
+      <DisplayImage />
       <CategoryExplanations />
     </VStack>
   );
