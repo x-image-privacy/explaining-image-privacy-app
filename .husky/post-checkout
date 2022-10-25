@@ -1,4 +1,9 @@
 #!/usr/bin/env sh
+
+# skip hook when in CI
+[ -n "$CI" ] && exit 0
+
+# this line will fail when trying to run it in CI because this file is checked-out in version control
 . "$(dirname -- "$0")/_/husky.sh"
 
 yarn install
