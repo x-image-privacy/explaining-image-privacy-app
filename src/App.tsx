@@ -23,7 +23,7 @@ const App: FC = () => {
         others.
       </Text>
       <MoreInfo />
-      <DisplayImage />
+      <DisplayImage mt={2} />
       <CategoryExplanations />
     </VStack>
   );
