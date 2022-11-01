@@ -1,13 +1,17 @@
-# explaining-image-privacy-app
+# Explaining Image Privacy - App
 
 Explaining Image Privacy using a Web interface.
+
+🔮 Click on the badge bellow to see the app live ✨
+
+[![Live deploy](https://www.netlify.com/v3/img/components/netlify-color-bg.svg)](https://fabulous-genie-8afcaf.netlify.app/)
 
 ## Installation
 
 Make sure you have `yarn` installed. You can check by running `yarn --version`.
 You can find yarn installation instructions [on the yarn website](https://yarnpkg.com/getting-started/install).
 
-You may also need `nodejs`. It is recommended to install Node using `nvm` which is the *node version manager* so you can switch between node version easily.
+You may also need `nodejs`. It is recommended to install Node using `nvm` which is the _node version manager_ so you can switch between node version easily.
 You can find installation information [on the nvm github repo](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 Before running the app you need to create a few environnement files:
