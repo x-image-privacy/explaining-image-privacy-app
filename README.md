@@ -1,4 +1,4 @@
-# Explaining Image Privacy - Demo App
+# Explaining Image Privacy - App
 
 Explaining Image Privacy using a Web interface.
 
