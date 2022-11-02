@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Box, Circle, HStack, Heading, Text, VStack } from '@chakra-ui/react';
+import { Box, HStack, Heading, Text, VStack } from '@chakra-ui/react';
 
 import CategoryExplanations from './components/CategoryExplanations';
 import DisplayImage from './components/DisplayImage';
