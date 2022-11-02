@@ -1,4 +1,5 @@
 export const MAIN_CONTAINER_CY = 'mainContainer';
+export const CONTENT_CONTAINER_CY = 'contentContainer';
 export const GRAPH_CONTAINER_CY = 'graphContainer';
 export const LANGUAGE_SELECT_CY = 'languageSelect';
 export const COLOR_SWITCH_BUTTON_CY = 'colorSwitch';
