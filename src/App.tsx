@@ -34,7 +34,7 @@ const App: FC = () => {
         <MoreInfo />
         <DisplayImage mt={2} />
         <HStack id={GRAPH_CONTAINER_CY} spacing={2} width="100%">
-          <Box w="50%" h="200px" p={1} display="flex" justifyContent="center">
+          <Box w="50%" h="600px" p={1} display="flex" justifyContent="center">
             <MyResponsiveCirclePacking
               data={data as unknown as BubbleCategory}
             />

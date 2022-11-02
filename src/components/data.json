@@ -3,13 +3,192 @@
   "color": "hsl(82, 70%, 50%)",
   "children": [
     {
+      "name": "identity",
+      "color": "hsl(205, 100%, 50%)",
+      "children": [
+        {
+          "name": "human",
+          "color": "hsl(57, 70%, 50%)",
+          "value": 4
+        },
+        {
+          "name": "birthday",
+          "color": "hsl(300, 70%, 50%)",
+          "value": 3
+        },
+        {
+          "name": "youth",
+          "color": "hsl(300, 70%, 50%)",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "sexual orientations",
+      "color": "hslhsl(300, 70%, 50%)",
+      "children": [
+        {
+          "name": "sexy",
+          "color": "hsl(300, 70%, 50%)",
+          "value": 2
+        },
+        {
+          "name": "kiss",
+          "color": "hsl(300, 70%, 50%)",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "political opinions",
+      "color": "hsl(82, 70%, 50%)",
+      "children": [
+        {
+          "name": "ballot",
+          "color": "hsl(56, 70%, 50%)",
+          "value": 4
+        },
+        {
+          "name": "authority",
+          "color": "hsl(56, 70%, 50%)",
+          "value": 6
+        },
+        {
+          "name": "Kremlin",
+          "color": "hsl(82, 40%, 50%)",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "wealth",
+      "color": "hsl(65, 70%, 50%)",
+      "children": [
+        {
+          "name": "royalty",
+          "color": "hsl(56, 70%, 50%)",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "name": "social status and activities",
+      "color": "hsl(82, 70%, 50%)",
+      "children": [
+        {
+          "name": "toddler",
+          "color": "hsl(56, 70%, 50%)",
+          "value": 3
+        },
+        {
+          "name": "vodka",
+          "color": "hsl(56, 70%, 50%)",
+          "value": 2
+        },
+        {
+          "name": "drug",
+          "color": "hsl(56, 70%, 50%)",
+          "value": 4
+        },
+        {
+          "name": "parent",
+          "color": "hsl(82, 70%, 50%)",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "religions",
+      "color": "hsl(82, 70%, 50%)",
+      "children": [
+        {
+          "name": "god",
+          "color": "hsl(56, 70%, 50%)",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "name": "ethnicity",
+      "color": "hsl(82, 70%, 50%)",
+      "children": [
+        {
+          "name": "eskimo",
+          "color": "hsl(56, 70%, 50%)",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "name": "health",
+      "color": "hsl(82, 70%, 50%)",
+      "children": [
+        {
+          "name": "optics",
+          "color": "hsl(56, 70%, 50%)",
+          "value": 2
+        },
+        {
+          "name": "nurse",
+          "color": "hsl(56, 70%, 50%)",
+          "value": 5
+        },
+        {
+          "name": "radiography",
+          "color": "hsl(82, 70%, 50%)",
+          "value": 3
+        }
+      ]
+    },
+    {
       "name": "job",
       "color": "hsl(82, 70%, 50%)",
       "children": [
         {
-          "name": "Dog",
-          "color": "hsl(82, 70%, 50%)",
+          "name": "promotion",
+          "color": "hsl(56, 70%, 50%)",
           "value": 4
+        },
+        {
+          "name": "songwriter",
+          "color": "hsl(56, 70%, 50%)",
+          "value": 3
+        },
+        {
+          "name": "workstation",
+          "color": "hsl(82, 70%, 50%)",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "emotions",
+      "color": "hsl(82, 70%, 50%)",
+      "children": [
+        {
+          "name": "happiness",
+          "color": "hsl(56, 70%, 50%)",
+          "value": 4
+        },
+        {
+          "name": "generous",
+          "color": "hsl(56, 70%, 50%)",
+          "value": 4
+        },
+        {
+          "name": "carefree",
+          "color": "hsl(56, 70%, 50%)",
+          "value": 4
+        },
+        {
+          "name": "serious",
+          "color": "hsl(56, 70%, 50%)",
+          "value": 4
+        },
+        {
+          "name": "pain",
+          "color": "hsl(82, 70%, 50%)",
+          "value": 2
         }
       ]
     }
