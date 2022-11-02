@@ -1,0 +1,17 @@
+{
+  "name": "Big bubble",
+  "color": "hsl(82, 70%, 50%)",
+  "children": [
+    {
+      "name": "job",
+      "color": "hsl(82, 70%, 50%)",
+      "children": [
+        {
+          "name": "Dog",
+          "color": "hsl(82, 70%, 50%)",
+          "value": 4
+        }
+      ]
+    }
+  ]
+}

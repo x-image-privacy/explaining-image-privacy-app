@@ -9,7 +9,10 @@ const CategoryExplanations: FC = () => (
     <Accordion allowToggle>
       <CategoryItem
         title="Category 1"
-        content="This category talks about the first category of interest for us."
+        content="This category talks about the first category of interest for us.
+        This category talks about the first category of interest for us.
+        This category talks about the first category of interest for us.
+        "
       />
       <CategoryItem
         title="Category 2"

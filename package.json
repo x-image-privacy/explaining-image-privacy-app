@@ -10,6 +10,8 @@
     "@chakra-ui/theme-tools": "2.0.12",
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",
+    "@nivo/circle-packing": "^0.80.0",
+    "@nivo/core": "^0.80.0",
     "framer-motion": "7.6.1",
     "i18next": "21.10.0",
     "i18next-browser-languagedetector": "6.1.8",
