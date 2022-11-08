@@ -5,6 +5,16 @@
     "MORE_INFO_MODAL_TITLE": "More information",
     "MORE_INFO_CONTENT": "This project is aimed at allowing users to explore image privacy concepts. This tool provides visualisations to help this understanding.",
     "EDITING_SHORTCUT": "To edit this document use",
-    "CLOSE_BUTTON": "Close"
+    "CLOSE_BUTTON": "Close",
+    "IDENTITY_CATEGORY": "This category talks about the unique set of characteristics that can be used to identify a person as themself and no one else.",
+    "SEXUAL_ORIENTATION_CATEGORY": "This category talks about one's inherent attraction to a sexual partner of a certain gender, or the absence of gender preference in a sexual relationship.",
+    "POLITICAL_OPINIONS_CATEGORY": "This category talks about to a broad category of attitudes that people might have on matters that concern their state, their government, or their society.",
+    "WEALTH_CATEGORY": "This category talks about the value of all the assets of worth owned by a person, community, compagny, or country.",
+    "SOCIAL_STATUS_AND_ACTIVITIES_CATEGORY": "This category talks about the social position that an individual occupies within a given social organisation. It is related to a set of rights and social norms that prevail in a given cultural group.",
+    "RELIGIONS_CATEGORY": "This category talks about a set of practices specific to a belief or social group.",
+    "ETHNICITY_CATEGORY": "This category talks about the identity with or membership in a particular racial, national, or cultural group and observance of that group's customs, beliefs, and language.",
+    "HEALTH_CATEGORY": "This category talks about the condition of an organism or one of its parts in which it performs its vital functions normally or properly.",
+    "JOB_CATEGORY": "This category talks about the work that a person does regularly in order to earn money.",
+    "EMOTIONS_CATEGORY": "This category talks about a spontaneous mental reaction, such as joy, sorrow, hate, and love."
   }
 }

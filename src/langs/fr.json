@@ -5,6 +5,16 @@
     "MORE_INFO_MODAL_TITLE": "Plus d'informations",
     "MORE_INFO_CONTENT": "Ce projet cherche à éduquer et sensibiliser les utilisateurs des réseaux sociaux aux concepts de vie privée dans les images. Cet outils propose des visualisations qui permettent d'aider l'assimilation de ces concepts.",
     "EDITING_SHORTCUT": "Pour éditer ce document, utilisez",
-    "CLOSE_BUTTON": "Fermer"
+    "CLOSE_BUTTON": "Fermer",
+    "IDENTITY_CATEGORY": "Cette catégorie concerne l'ensemble des caractéristiques uniques qui peuvent être utilisées pour identifier une personne comme étant elle-même et personne d'autre.",
+    "SEXUAL_ORIENTATION_CATEGORY": "Cette catégorie concerne l'attirance inhérente d'une personne pour un(e) partenaire sexuel d'un certain sexe, ou l'absence de préférence de genre dans une relation sexuelle.",
+    "POLITICAL_OPINIONS_CATEGORY": "Cette catégorie fait référence à une large catégorie d'attitudes que les gens peuvent avoir sur des questions qui concernent leur État, leur gouvernement ou leur société.",
+    "WEALTH_CATEGORY": "Cette catégorie concerne la valeur de tous les actifs de valeur détenus par une personne, une communauté, une société ou un pays.",
+    "SOCIAL_STATUS_AND_ACTIVITIES_CATEGORY": "Cette catégorie concerne la position sociale qu'occupe un individu au sein d'une organisation sociale donnée. Elle est liée à un ensemble de droits et de normes sociales qui prévalent dans un groupe culturel donné.",
+    "RELIGIONS_CATEGORY": "Cette catégorie parle d'un ensemble de pratiques spécifiques à une croyance ou à un groupe social.",
+    "ETHNICITY_CATEGORY": "Cette catégorie concerne l'identité ou l'appartenance à un groupe racial, national ou culturel particulier et l'observation des coutumes, des croyances et de la langue de ce groupe.",
+    "HEALTH_CATEGORY": "Cette catégorie concerne l'état d'un organisme ou d'une de ses parties dans lequel il remplit normalement ou correctement ses fonctions vitales.",
+    "JOB_CATEGORY": "Cette catégorie concerne le travail qu'une personne effectue régulièrement afin de gagner de l'argent.",
+    "EMOTIONS_CATEGORY": "Cette catégorie fait référence à une réaction mentale spontanée, comme la joie, la tristesse, la haine et l'amour."
   }
 }
