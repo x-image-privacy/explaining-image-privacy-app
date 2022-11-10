@@ -27,7 +27,7 @@ const MyResponsiveCirclePacking: FC<Props> = ({ data /* see data tab */ }) => {
       margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
       id="name"
       value="value"
-      colors={{ scheme: 'nivo' }}
+      colors={(d) => d.data.color || '#FF0000'}
       childColor={{
         from: 'color',
         modifiers: [['brighter', 0.4]],
