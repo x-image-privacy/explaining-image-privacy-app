@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, PropsWithChildren } from 'react';
 
 import {
   AccordionButton,
@@ -12,7 +12,7 @@ type Props = {
   content: string;
 };
 
-const CategoryItem: FC<Props> = ({ title, content }) => (
+const CategoryItem: FC<PropsWithChildren<Props>> = ({ title, content }) => (
   <AccordionItem>
     <AccordionButton>
       <AccordionIcon />

@@ -25,7 +25,7 @@
     },
     {
       "name": "sexual orientations",
-      "color": "hslhsl(300, 70%, 50%)",
+      "color": "hsl(300, 70%, 50%)",
       "children": [
         {
           "name": "sexy",

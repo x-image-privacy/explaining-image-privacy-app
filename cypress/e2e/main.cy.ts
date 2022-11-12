@@ -39,5 +39,11 @@ describe('Main Screen', () => {
     cy.getById(MORE_INFO_MODAL_CLOSE_BUTTON_CY).should('be.visible').click();
     // check modal is closed
     cy.getById(chakraModal(MORE_INFO_MODAL_CY)).should('not.exist');
+
+    // cy.get('.circle-packing')
+    //   .should('be.visible')
+    //   .and((chart) => {
+    //     expect(chart.height()).to.be.greaterThan(200);
+    //   });
   });
 });

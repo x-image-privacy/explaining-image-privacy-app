@@ -3854,7 +3854,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nivo/circle-packing@npm:^0.80.0":
+"@nivo/circle-packing@npm:0.80.0":
   version: 0.80.0
   resolution: "@nivo/circle-packing@npm:0.80.0"
   dependencies:
@@ -9116,7 +9116,7 @@ __metadata:
     "@cypress/instrument-cra": 1.4.0
     "@emotion/react": 11.10.4
     "@emotion/styled": 11.10.4
-    "@nivo/circle-packing": ^0.80.0
+    "@nivo/circle-packing": 0.80.0
     "@nivo/core": ^0.80.0
     "@trivago/prettier-plugin-sort-imports": 3.3.1
     "@types/cypress": 1.1.3
