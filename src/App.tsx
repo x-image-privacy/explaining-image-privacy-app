@@ -6,16 +6,18 @@ import { Box, HStack, Heading, Text, VStack } from '@chakra-ui/react';
 import CategoryExplanations from './components/CategoryExplanations';
 import DisplayImage from './components/DisplayImage';
 import MoreInfo from './components/MoreInfo';
+import MyResponsiveChord from './components/MyResponsiveChord';
 import MyResponsiveCirclePacking from './components/MyResponsiveCirclePacking';
 import AppBar from './components/common/AppBar';
 import data from './components/data.json';
+import dataChord from './components/dataChordPacking.json';
 import {
   CONTENT_CONTAINER_CY,
   GRAPH_CONTAINER_CY,
   MAIN_CONTAINER_CY,
   MAIN_HEADING_CY,
 } from './config/selectors';
-import { BubbleCategory } from './types';
+import { BubbleCategory, ChordCategory } from './types';
 
 const App: FC = () => {
   const { t } = useTranslation();
@@ -43,6 +45,9 @@ const App: FC = () => {
             <CategoryExplanations />
           </Box>
         </HStack>
+        <Box w="50%" h="600px" p={1} display="flex" justifyContent="center">
+          <MyResponsiveChord data={dataChord as unknown as ChordCategory} />
+        </Box>
       </VStack>
     </VStack>
   );

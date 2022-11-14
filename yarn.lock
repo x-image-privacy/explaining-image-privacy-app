@@ -3854,6 +3854,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nivo/arcs@npm:0.80.0":
+  version: 0.80.0
+  resolution: "@nivo/arcs@npm:0.80.0"
+  dependencies:
+    "@nivo/colors": 0.80.0
+    "@react-spring/web": 9.4.5
+    d3-shape: ^1.3.5
+  peerDependencies:
+    "@nivo/core": 0.80.0
+    react: ">= 16.14.0 < 19.0.0"
+  checksum: 2cc210d9c62b35713eb19a2f5ffbe7138d9133519f9a8092d5a59c7388bce3bedbf13f0b5b344b31db36f52ee0fe5bde31058f5ef0628e84e994d942d01a63a4
+  languageName: node
+  linkType: hard
+
+"@nivo/chord@npm:^0.80.0":
+  version: 0.80.0
+  resolution: "@nivo/chord@npm:0.80.0"
+  dependencies:
+    "@nivo/arcs": 0.80.0
+    "@nivo/colors": 0.80.0
+    "@nivo/legends": 0.80.0
+    "@nivo/tooltip": 0.80.0
+    "@react-spring/web": 9.4.5
+    d3-chord: ^1.0.6
+    d3-shape: ^1.3.5
+  peerDependencies:
+    "@nivo/core": 0.80.0
+    react: ">= 16.14.0 < 19.0.0"
+  checksum: ea4360ee0d7ed7b54c94a16cc15024242f3928d5ea84730710f51be6232b914b25a0d02b16fad5e718b3e356e2ce0a1a932b79a0474fe2c0646df7793466ee53
+  languageName: node
+  linkType: hard
+
 "@nivo/circle-packing@npm:0.80.0":
   version: 0.80.0
   resolution: "@nivo/circle-packing@npm:0.80.0"
@@ -3905,6 +3937,17 @@ __metadata:
     prop-types: ">= 15.5.10 < 16.0.0"
     react: ">= 16.14.0 < 19.0.0"
   checksum: 05fd9ccc9d9876affea17498a2007f5974641c7a2bb1c12c4d8f97bdae48519dd5882c65653074b6756d14eef47dbaeaf8b8243d3e5389efd3d1e180ecbfde75
+  languageName: node
+  linkType: hard
+
+"@nivo/legends@npm:0.80.0":
+  version: 0.80.0
+  resolution: "@nivo/legends@npm:0.80.0"
+  peerDependencies:
+    "@nivo/core": 0.80.0
+    prop-types: ">= 15.5.10 < 16.0.0"
+    react: ">= 16.14.0 < 19.0.0"
+  checksum: 659aba35105143ac7da663a51bc6a69f815e23efd278b8b1314bd48b9c853f4c3b7e9cf61de1439390eff3983b754eaea5dd3923fa2caad97b0fca6133a05ae9
   languageName: node
   linkType: hard
 
@@ -7654,12 +7697,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"d3-array@npm:1":
+  version: 1.2.4
+  resolution: "d3-array@npm:1.2.4"
+  checksum: d0be1fa7d72dbfac8a3bcffbb669d42bcb9128d8818d84d2b1df0c60bbe4c8e54a798be0457c55a219b399e2c2fabcbd581cbb130eb638b5436b0618d7e56000
+  languageName: node
+  linkType: hard
+
 "d3-array@npm:2, d3-array@npm:^2.3.0":
   version: 2.12.1
   resolution: "d3-array@npm:2.12.1"
   dependencies:
     internmap: ^1.0.0
   checksum: 97853b7b523aded17078f37c67742f45d81e88dda2107ae9994c31b9e36c5fa5556c4c4cf39650436f247813602dfe31bf7ad067ff80f127a16903827f10c6eb
+  languageName: node
+  linkType: hard
+
+"d3-chord@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "d3-chord@npm:1.0.6"
+  dependencies:
+    d3-array: 1
+    d3-path: 1
+  checksum: e4ca95ffff089f0eccf796d16a5574121e0ecbe658dcd9d5fa760af3573c3349264ce325c0adf1f32bcad67038d3938edd109712166cfb5b3bbe068e27c012e9
   languageName: node
   linkType: hard
 
@@ -9116,6 +9176,7 @@ __metadata:
     "@cypress/instrument-cra": 1.4.0
     "@emotion/react": 11.10.4
     "@emotion/styled": 11.10.4
+    "@nivo/chord": ^0.80.0
     "@nivo/circle-packing": 0.80.0
     "@nivo/core": ^0.80.0
     "@trivago/prettier-plugin-sort-imports": 3.3.1
