@@ -77,7 +77,7 @@ const App: FC = () => {
               </>
             )) ||
             (url === '3' && (
-              <Box w="100%">
+              <Box w="100%" p={1}>
                 <CategoryExplanations />
               </Box>
             )) || (
