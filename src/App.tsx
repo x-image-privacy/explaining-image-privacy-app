@@ -6,19 +6,25 @@ import { Box, HStack, Heading, Text, VStack } from '@chakra-ui/react';
 import CategoryExplanations from './components/CategoryExplanations';
 import DisplayImage from './components/DisplayImage';
 import MoreInfo from './components/MoreInfo';
+import MyResponsiveChord from './components/MyResponsiveChord';
 import MyResponsiveCirclePacking from './components/MyResponsiveCirclePacking';
 import AppBar from './components/common/AppBar';
 import data from './components/data.json';
+import dataChord from './components/dataChordPacking.json';
 import {
   CONTENT_CONTAINER_CY,
   GRAPH_CONTAINER_CY,
   MAIN_CONTAINER_CY,
   MAIN_HEADING_CY,
 } from './config/selectors';
-import { BubbleCategory } from './types';
+import { BubbleCategory, ChordCategory } from './types';
 
 const App: FC = () => {
   const { t } = useTranslation();
+  const url = window.location.href;
+
+  const urlSplit = url.split('/?');
+  const urlId = urlSplit[1];
 
   return (
     <VStack id={MAIN_CONTAINER_CY}>
@@ -35,9 +41,20 @@ const App: FC = () => {
         <DisplayImage mt={2} />
         <HStack id={GRAPH_CONTAINER_CY} spacing={2} width="100%">
           <Box w="50%" h="600px" p={1} display="flex" justifyContent="center">
-            <MyResponsiveCirclePacking
-              data={data as unknown as BubbleCategory}
-            />
+            {(urlId === '1' && (
+              <MyResponsiveCirclePacking
+                data={data as unknown as BubbleCategory}
+              />
+            )) ||
+              (urlId === '2' && (
+                <MyResponsiveChord
+                  data={dataChord as unknown as ChordCategory}
+                />
+              )) || (
+                <MyResponsiveChord
+                  data={dataChord as unknown as ChordCategory}
+                />
+              )}
           </Box>
           <Box w="50%" p={1}>
             <CategoryExplanations />
