@@ -40,25 +40,64 @@ const App: FC = () => {
         <MoreInfo />
         <DisplayImage mt={2} />
         <HStack id={GRAPH_CONTAINER_CY} spacing={2} width="100%">
-          <Box w="50%" h="600px" p={1} display="flex" justifyContent="center">
-            {(urlId === '1' && (
-              <MyResponsiveCirclePacking
-                data={data as unknown as BubbleCategory}
-              />
+          {(urlId === '1' && (
+            <>
+              <Box
+                w="50%"
+                h="600px"
+                p={1}
+                display="flex"
+                justifyContent="center"
+              >
+                <MyResponsiveCirclePacking
+                  data={data as unknown as BubbleCategory}
+                />
+              </Box>
+              <Box w="50%" p={1}>
+                <CategoryExplanations />
+              </Box>
+            </>
+          )) ||
+            (urlId === '2' && (
+              <>
+                <Box
+                  w="50%"
+                  h="600px"
+                  p={1}
+                  display="flex"
+                  justifyContent="center"
+                >
+                  <MyResponsiveChord
+                    data={dataChord as unknown as ChordCategory}
+                  />
+                </Box>
+                <Box w="50%" p={1}>
+                  <CategoryExplanations />
+                </Box>
+              </>
             )) ||
-              (urlId === '2' && (
-                <MyResponsiveChord
-                  data={dataChord as unknown as ChordCategory}
-                />
-              )) || (
-                <MyResponsiveChord
-                  data={dataChord as unknown as ChordCategory}
-                />
-              )}
-          </Box>
-          <Box w="50%" p={1}>
-            <CategoryExplanations />
-          </Box>
+            (url === '3' && (
+              <Box w="100%">
+                <CategoryExplanations />
+              </Box>
+            )) || (
+              <>
+                <Box
+                  w="50%"
+                  h="600px"
+                  p={1}
+                  display="flex"
+                  justifyContent="center"
+                >
+                  <MyResponsiveCirclePacking
+                    data={data as unknown as BubbleCategory}
+                  />
+                </Box>
+                <Box w="50%" p={1}>
+                  <CategoryExplanations />
+                </Box>
+              </>
+            )}
         </HStack>
       </VStack>
     </VStack>
