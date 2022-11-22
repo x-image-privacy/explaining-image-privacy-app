@@ -25,7 +25,6 @@ const App: FC = () => {
 
   const urlSplit = url.split('/?');
   const urlId = urlSplit[1];
-  console.log(urlId);
 
   return (
     <VStack id={MAIN_CONTAINER_CY}>
@@ -61,9 +60,6 @@ const App: FC = () => {
             <CategoryExplanations />
           </Box>
         </HStack>
-        {/* <Box w="50%" h="600px" p={1} display="flex" justifyContent="center">
-          <MyResponsiveChord data={dataChord as unknown as ChordCategory} />
-        </Box> */}
       </VStack>
     </VStack>
   );
