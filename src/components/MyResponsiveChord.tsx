@@ -16,7 +16,14 @@ type Props = { data: ChordCategory };
 const MyResponsiveChord: FC<Props> = ({ data }) => (
   <ResponsiveChord
     data={data}
-    keys={['John', 'Raoul', 'Jane', 'Marcel', 'Ibrahim']}
+    keys={[
+      'Identity',
+      'Sexual orientation',
+      'Political opinions',
+      'Wealth',
+      'Social status dans activities',
+      'dhgth',
+    ]}
     margin={{ top: 60, right: 60, bottom: 90, left: 60 }}
     valueFormat=".2f"
     padAngle={0.02}
