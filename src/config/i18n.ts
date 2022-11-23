@@ -6,18 +6,11 @@ import { initReactI18next } from 'react-i18next';
 import en from '../langs/en.json';
 import fr from '../langs/fr.json';
 
-const resources = {
+export const resources = {
   en,
   fr,
 };
-const defaultNS = 'translations';
-
-declare module 'react-i18next' {
-  interface CustomTypeOptions {
-    defaultNS: typeof defaultNS;
-    resources: typeof resources['en'];
-  }
-}
+export const defaultNS = 'translations';
 
 i18n
   .use(LanguageDetector)
