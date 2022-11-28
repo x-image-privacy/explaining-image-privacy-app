@@ -1,20 +1,48 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Heading, Text, VStack } from '@chakra-ui/react';
+
 
 import DisplayImage from './components/DisplayImage';
 import GraphComponents from './components/GraphComponents';
 import MoreInfo from './components/MoreInfo';
 import AppBar from './components/common/AppBar';
+
 import {
   CONTENT_CONTAINER_CY,
   MAIN_CONTAINER_CY,
   MAIN_HEADING_CY,
 } from './config/selectors';
 
+import imageLabels from './data/image_label.json';
+import { CategoryData, ChordCategory } from './types';
+import {
+  fetchImageData,
+  splitKeywordsInCategories,
+  transformDataToBubbles,
+} from './utils/imageData';
+
 const App: FC = () => {
   const { t } = useTranslation();
+  const defaultImage = Object.keys(imageLabels)[0];
+  const [imageId, setImageId] = useState<string>(Object.keys(imageLabels)[0]);
+  const [imageCategories, setImageCategories] = useState<CategoryData>({});
+
+  useEffect(
+    () => {
+      fetchImageData(defaultImage, (imageData) =>
+        setImageCategories(splitKeywordsInCategories(imageData)),
+      );
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [],
+  );
+
+  const url = window.location.href;
+
+  const urlSplit = url.split('/?');
+  const urlId = urlSplit[1];
 
   return (
     <VStack id={MAIN_CONTAINER_CY}>
