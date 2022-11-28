@@ -8,11 +8,7 @@ type Props = {
   title: string;
   content: string;
 };
-const CategoryObject: FC<PropsWithChildren<Props>> = ({
-  title,
-  content,
-  children,
-}) => (
+const CategoryObject: FC<PropsWithChildren<Props>> = ({ title, content }) => (
   <Accordion allowToggle>
     <CategoryItem title={title} content={content} />
   </Accordion>
