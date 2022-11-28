@@ -10,10 +10,10 @@ import {
 
 import { FC } from 'react';
 
-import { HistorgamCategory } from '../types';
+import { ImageKeywords } from '../types';
 
 type Props = {
-  file: HistorgamCategory;
+  file: ImageKeywords[];
 };
 
 const HistogramBar: FC<Props> = ({ file }) => (
@@ -29,11 +29,11 @@ const HistogramBar: FC<Props> = ({ file }) => (
     }}
   >
     <CartesianGrid strokeDasharray="3 3" />
-    <XAxis dataKey="name" />
+    <XAxis dataKey="keyword" />
     <YAxis />
     <Tooltip />
     <Legend />
-    <Bar dataKey="uv" fill="#82ca9d" />
+    <Bar dataKey="coef" fill="#82ca9d" />
   </BarChart>
 );
 

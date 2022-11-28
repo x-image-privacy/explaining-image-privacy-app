@@ -67,7 +67,8 @@ const App: FC = () => {
             ))}
           </Select>
         </Box>
-        <DisplayImage imageId={imageId} mt={2} /> <GraphComponents />
+        <DisplayImage imageId={imageId} mt={2} />{' '}
+        <GraphComponents data={imageCategories} />
       </VStack>
     </VStack>
   );
