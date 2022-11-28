@@ -14,7 +14,6 @@ export type HistorgamCategory = word[];
 // My responsible chord data type
 export type ChordCategory = number[][];
 
-
 export enum CategoryNames {
   Identity = 'identity',
   SexualOrientations = 'sexual_orientations',

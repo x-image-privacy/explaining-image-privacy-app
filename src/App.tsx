@@ -1,22 +1,19 @@
 import { FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Heading, Text, VStack } from '@chakra-ui/react';
-
+import { Box, Heading, Select, Text, VStack } from '@chakra-ui/react';
 
 import DisplayImage from './components/DisplayImage';
 import GraphComponents from './components/GraphComponents';
 import MoreInfo from './components/MoreInfo';
 import AppBar from './components/common/AppBar';
-
 import {
   CONTENT_CONTAINER_CY,
   MAIN_CONTAINER_CY,
   MAIN_HEADING_CY,
 } from './config/selectors';
-
 import imageLabels from './data/image_label.json';
-import { CategoryData, ChordCategory } from './types';
+import { CategoryData } from './types';
 import {
   fetchImageData,
   splitKeywordsInCategories,
@@ -39,11 +36,6 @@ const App: FC = () => {
     [],
   );
 
-  const url = window.location.href;
-
-  const urlSplit = url.split('/?');
-  const urlId = urlSplit[1];
-
   return (
     <VStack id={MAIN_CONTAINER_CY}>
       <AppBar />
@@ -56,8 +48,26 @@ const App: FC = () => {
           with others.
         </Text>
         <MoreInfo />
-        <DisplayImage mt={2} />
-        <GraphComponents />
+        <Box>
+          <Text>{t('Select an image')}</Text>
+          <Select
+            onChange={({ target }) => {
+              const newImageId = target.value;
+              setImageId(newImageId);
+              fetchImageData(newImageId, (imageKeywords) => {
+                setImageCategories(splitKeywordsInCategories(imageKeywords));
+              });
+            }}
+            value={imageId}
+          >
+            {Object.keys(imageLabels).map((k) => (
+              <option key={k} value={k}>
+                {k}
+              </option>
+            ))}
+          </Select>
+        </Box>
+        <DisplayImage imageId={imageId} mt={2} /> <GraphComponents />
       </VStack>
     </VStack>
   );
