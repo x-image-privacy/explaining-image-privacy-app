@@ -4,7 +4,6 @@ import { Box, HStack } from '@chakra-ui/react';
 
 import { GRAPH_CONTAINER_CY } from '../config/selectors';
 import { ChordCategory } from '../types';
-import CategoryExplanations from './CategoryExplanations';
 import MyResponsiveChord from './MyResponsiveChord';
 import dataChord from './dataChordPacking.json';
 
@@ -14,7 +13,7 @@ const SimpleGlobal: FC = () => (
       <MyResponsiveChord data={dataChord as unknown as ChordCategory} />
     </Box>
     <Box w="50%" p={1}>
-      <CategoryExplanations />
+      Explanations
     </Box>
   </HStack>
 );

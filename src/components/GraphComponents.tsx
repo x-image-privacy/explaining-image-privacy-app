@@ -20,7 +20,7 @@ const GraphComponents: FC<Props> = ({ data }) => {
     case '1':
       return <SimpleLocal data={data} />;
     case '2':
-      return <DynamicLocal />;
+      return <DynamicLocal data={data} />;
     case '3':
       return <SimpleGlobal />;
 

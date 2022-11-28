@@ -1,7 +1,6 @@
 import { DEFAULT_LANGUAGE } from '../../src/config/constants';
 import {
   COLOR_SWITCH_BUTTON_CY,
-  DISPLAY_IMAGE_CY,
   LANGUAGE_SELECT_CY,
   MAIN_CONTAINER_CY,
   MAIN_HEADING_CY,
@@ -27,8 +26,6 @@ describe('Main Screen', () => {
     cy.getById(COLOR_SWITCH_BUTTON_CY).should('be.visible');
     // check that the title is visible
     cy.getById(MAIN_HEADING_CY).should('be.visible');
-    // check that the image is visible
-    cy.getById(DISPLAY_IMAGE_CY).should('be.visible');
     // check that the more info button is displayed
     cy.getById(MORE_INFO_BUTTON_CY).should('be.visible');
 

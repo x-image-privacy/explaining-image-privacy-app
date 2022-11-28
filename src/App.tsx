@@ -14,11 +14,7 @@ import {
 } from './config/selectors';
 import imageLabels from './data/image_label.json';
 import { CategoryData } from './types';
-import {
-  fetchImageData,
-  splitKeywordsInCategories,
-  transformDataToBubbles,
-} from './utils/imageData';
+import { fetchImageData, splitKeywordsInCategories } from './utils/imageData';
 
 const App: FC = () => {
   const { t } = useTranslation();
