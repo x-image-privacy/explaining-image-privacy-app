@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { Box, Heading, Select, Text, VStack } from '@chakra-ui/react';
 
 import DisplayImage from './components/DisplayImage';
-import GraphComponents from './components/GraphComponents';
 import MoreInfo from './components/MoreInfo';
 import AppBar from './components/common/AppBar';
 import {
@@ -64,7 +63,6 @@ const App: FC = () => {
           </Select>
         </Box>
         <DisplayImage imageId={imageId} mt={2} />{' '}
-        <GraphComponents data={imageCategories} />
       </VStack>
     </VStack>
   );

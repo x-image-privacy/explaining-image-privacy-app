@@ -6,7 +6,11 @@ import { Button, Heading, Text, VStack } from '@chakra-ui/react';
 
 import MoreInfo from '../components/MoreInfo';
 import AppBar from '../components/common/AppBar';
-import { SIMPLE_LOCAL_ROUTE } from '../config/routes';
+import {
+  DYNAMIC_LOCAL_ROUTE,
+  SIMPLE_LOCAL_ROUTE,
+  WORD_CLOUD_LOCAL_ROUTE,
+} from '../config/routes';
 import {
   CONTENT_CONTAINER_CY,
   MAIN_CONTAINER_CY,
@@ -30,11 +34,11 @@ const MainPage: FC = () => {
         <Link to={SIMPLE_LOCAL_ROUTE}>
           <Button>Simple Local Graph</Button>
         </Link>
-        <Link to="/graph1">
-          <Button>Simple Local Graph</Button>
+        <Link to={DYNAMIC_LOCAL_ROUTE}>
+          <Button>Dynamic Local Graph</Button>
         </Link>
-        <Link to="/graph1">
-          <Button>Simple Local Graph</Button>
+        <Link to={WORD_CLOUD_LOCAL_ROUTE}>
+          <Button>Word Cloud Local Graph</Button>
         </Link>
       </VStack>
     </VStack>
