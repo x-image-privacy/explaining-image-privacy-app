@@ -29,7 +29,7 @@ const SimpleLocal: FC<Props> = ({ data }) => {
               // @ts-ignore
               content={t(`${cat.toUpperCase()}_CATEGORY_CONTENT`)}
             >
-              <HistogramBar file={data[cat]} />
+              <HistogramBar data={data[cat]} />
             </CategoryItem>
           ))}
       </Accordion>

@@ -1,12 +1,7 @@
 import Papa from 'papaparse';
 
 import { KEYWORDS_BY_CATEGORY } from '../config/constants';
-import {
-  BubbleCategory,
-  Category,
-  CategoryData,
-  ImageKeywords,
-} from '../types';
+import { BubbleCategory, Category, CategoryData, ImageKeyword } from '../types';
 
 export const getImagePath = (imageId: string): string => `/data/${imageId}.jpg`;
 export const getImageDataPath = (imageId: string): string =>
@@ -14,20 +9,20 @@ export const getImageDataPath = (imageId: string): string =>
 
 export const fetchImageData = (
   imageId: string,
-  callback: (data: ImageKeywords[]) => void,
+  callback: (data: ImageKeyword[]) => void,
 ): void => {
   Papa.parse(getImageDataPath(imageId), {
     download: true,
     header: true,
     skipEmptyLines: true,
     complete: (res) => {
-      callback(res.data as ImageKeywords[]);
+      callback(res.data as ImageKeyword[]);
     },
   });
 };
 
 export const splitKeywordsInCategories = (
-  imageData: ImageKeywords[],
+  imageData: ImageKeyword[],
 ): CategoryData => {
   let categoryData: CategoryData = {};
   imageData.forEach((entry) => {
@@ -49,6 +44,7 @@ export const transformDataToBubbles = (
   imageCategories: CategoryData,
 ): BubbleCategory => {
   const bubbles = Object.entries(imageCategories).map(([cat, keywords]) => ({
+    // todo: add nice categories
     name: cat,
     children: keywords.map((k) => ({ name: k.keyword, value: k.coef })),
   })) as Category[];

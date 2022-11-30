@@ -7,9 +7,7 @@ export type BubbleCategory = {
   children: Category[];
 };
 
-// Histogram category item data type
-export type word = { name: string; uv: number };
-export type HistorgamCategory = word[];
+export type ImageKeyword = { keyword: string; coef: number };
 
 // My responsible chord data type
 export type ChordCategory = number[][];
@@ -31,10 +29,8 @@ export type RawCategoryData = {
   [Property in `${CategoryNames}`]: string[];
 };
 
-export type ImageKeywords = { keyword: string; coef: number };
-
 export type CategoryData = {
-  [Property in `${CategoryNames}`]?: ImageKeywords[];
+  [Property in `${CategoryNames}`]?: ImageKeyword[];
 } & {
-  [key: string]: ImageKeywords[];
+  [key: string]: ImageKeyword[];
 };

@@ -10,17 +10,17 @@ import {
 
 import { FC } from 'react';
 
-import { ImageKeywords } from '../types';
+import { ImageKeyword } from '../types';
 
 type Props = {
-  file: ImageKeywords[];
+  data: ImageKeyword[];
 };
 
-const HistogramBar: FC<Props> = ({ file }) => (
+const HistogramBar: FC<Props> = ({ data }) => (
   <BarChart
     width={500}
     height={300}
-    data={file}
+    data={data}
     margin={{
       top: 5,
       right: 30,
