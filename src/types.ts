@@ -7,8 +7,12 @@ export type BubbleCategory = {
   children: Category[];
 };
 
+// Histogram category item data type
+export type word = { name: string; uv: number };
+export type HistorgamCategory = word[];
+
 // My responsible chord data type
-export type ChordCategory = [number[]];
+export type ChordCategory = number[][];
 
 export enum CategoryNames {
   Identity = 'identity',

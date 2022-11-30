@@ -12,13 +12,19 @@ type Props = {
   content: string;
 };
 
-const CategoryItem: FC<PropsWithChildren<Props>> = ({ title, content }) => (
+const CategoryItem: FC<PropsWithChildren<Props>> = ({
+  title,
+  content,
+  children,
+}) => (
   <AccordionItem>
     <AccordionButton>
       <AccordionIcon />
       {title}
     </AccordionButton>
     <AccordionPanel>{content}</AccordionPanel>
+    {children && <AccordionPanel> {children} </AccordionPanel>}
   </AccordionItem>
 );
+
 export default CategoryItem;
