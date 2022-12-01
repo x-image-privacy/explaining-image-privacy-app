@@ -18,6 +18,7 @@ i18n
   .init({
     resources,
     lng: 'en',
+    fallbackLng: 'en',
     // debug only when not in production
     debug: process.env.NODE_ENV !== 'production',
     ns: [defaultNS],
