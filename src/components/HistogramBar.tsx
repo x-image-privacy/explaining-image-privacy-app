@@ -30,10 +30,10 @@ const HistogramBar: FC<Props> = ({ data }) => (
   >
     <CartesianGrid strokeDasharray="3 3" />
     <XAxis dataKey="keyword" />
-    <YAxis />
+    <YAxis domain={[0, 1]} />
     <Tooltip />
     <Legend />
-    <Bar dataKey="coef" fill="#82ca9d" />
+    <Bar dataKey="confidence" fill="#82ca9d" />
   </BarChart>
 );
 

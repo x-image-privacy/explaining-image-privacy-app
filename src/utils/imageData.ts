@@ -46,7 +46,7 @@ export const transformDataToBubbles = (
   const bubbles = Object.entries(imageCategories).map(([cat, keywords]) => ({
     // todo: add nice categories
     name: cat,
-    children: keywords.map((k) => ({ name: k.keyword, value: k.coef })),
+    children: keywords.map((k) => ({ name: k.keyword, value: k.confidence })),
   })) as Category[];
 
   return {
