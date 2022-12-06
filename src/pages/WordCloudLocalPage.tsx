@@ -5,7 +5,6 @@ import { Box, Container } from '@chakra-ui/react';
 import DisplayImage from '../components/DisplayImage';
 import DynamicLocal from '../components/DynamicLocal';
 import ImageSelect from '../components/ImageSelect';
-import BackButton from '../components/common/BackButton';
 import imageLabels from '../data/image_label.json';
 import { CategoryData } from '../types';
 import { fetchImageData, splitKeywordsInCategories } from '../utils/imageData';
@@ -27,7 +26,6 @@ const WordCloudLocalPage: FC = () => {
   return (
     <Container>
       <Box>
-        <BackButton />
         <ImageSelect
           imageId={imageId}
           setImageId={setImageId}

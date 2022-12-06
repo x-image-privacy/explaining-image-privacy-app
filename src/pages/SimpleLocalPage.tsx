@@ -5,7 +5,6 @@ import { Box, Container } from '@chakra-ui/react';
 import DisplayImage from '../components/DisplayImage';
 import ImageSelect from '../components/ImageSelect';
 import SimpleLocal from '../components/SimpleLocal';
-import BackButton from '../components/common/BackButton';
 import imageLabels from '../data/image_label.json';
 import { CategoryData } from '../types';
 import { fetchImageData, splitKeywordsInCategories } from '../utils/imageData';
@@ -26,9 +25,8 @@ const SimpleLocalPage: FC = () => {
   );
 
   return (
-    <Container>
+    <Container w="100pw">
       <Box>
-        <BackButton />
         <ImageSelect
           imageId={imageId}
           setImageId={setImageId}
