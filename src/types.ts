@@ -7,7 +7,7 @@ export type BubbleCategory = {
   children: Category[];
 };
 
-export type ImageKeyword = { keyword: string; coef: number };
+export type ImageKeyword = { keyword: string; confidence: number };
 
 // My responsible chord data type
 export type ChordCategory = number[][];
