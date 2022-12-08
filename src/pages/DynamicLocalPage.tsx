@@ -39,11 +39,16 @@ const DynamicLocalPage: FC = () => {
   );
 
   return (
-    <Container>
+    <Container maxW="100vw" centerContent p={3}>
       <DisplayImage imageId={imageId1} mt={2} />
-      <DynamicLocal data={imageCategories1} />
+      <Container maxW="xxl">
+        <DynamicLocal data={imageCategories1} />
+      </Container>
+
       <DisplayImage imageId={imageId2} mt={2} />
-      <DynamicLocal data={imageCategories2} />
+      <Container maxW="xxl">
+        <DynamicLocal data={imageCategories2} />
+      </Container>
     </Container>
   );
 };

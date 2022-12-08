@@ -39,7 +39,7 @@ const WordCloudLocalPage: FC = () => {
   );
 
   return (
-    <Container w="100pw">
+    <Container w="100vw" p={3}>
       <DisplayImage imageId={imageId1} mt={2} />
       <DynamicLocal data={imageCategories1} />
       <DisplayImage imageId={imageId2} mt={2} />
