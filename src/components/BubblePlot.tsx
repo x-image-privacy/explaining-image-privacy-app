@@ -13,7 +13,7 @@ import { BubbleCategory } from '../types';
 // you'll often use just a few of them.
 
 type Props = { data: BubbleCategory };
-const MyResponsiveCirclePacking: FC<Props> = ({ data }) => {
+const BubblePlot: FC<Props> = ({ data }) => {
   const [zoomedId, setZoomedId] = useState<string | null>(null);
 
   return (
@@ -68,4 +68,4 @@ const MyResponsiveCirclePacking: FC<Props> = ({ data }) => {
   );
 };
 
-export default MyResponsiveCirclePacking;
+export default BubblePlot;

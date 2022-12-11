@@ -27,6 +27,7 @@
     "JOB_CATEGORY_CONTENT": "Cette catégorie concerne le travail qu'une personne effectue régulièrement afin de gagner de l'argent.",
     "EMOTIONS_CATEGORY_CONTENT": "Cette catégorie fait référence à une réaction mentale spontanée, comme la joie, la tristesse, la haine et l'amour.",
     "Select an image": "Sélectionnez une image",
-    "Back": "Retour"
+    "Back": "Retour",
+    "Confidence": "Confiance"
   }
 }
