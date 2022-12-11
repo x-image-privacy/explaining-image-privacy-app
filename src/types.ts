@@ -18,11 +18,12 @@ export enum CategoryNames {
   PoliticalOpinions = 'political_opinions',
   Wealth = 'wealth',
   SocialStatusAndActivities = 'social_status_and_activities',
-  Religions = 'religions',
+  Religion = 'religion',
   Ethnicity = 'ethnicity',
   Health = 'health',
   Job = 'job',
   Emotions = 'emotions',
+  NotApplicable = 'not_applicable',
 }
 // raw catgory data
 export type RawCategoryData = {

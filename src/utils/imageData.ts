@@ -1,6 +1,6 @@
 import Papa from 'papaparse';
 
-import { KEYWORDS_BY_CATEGORY } from '../config/constants';
+import keywordsByCategory from '../data/category_words.json';
 import { BubbleCategory, Category, CategoryData, ImageKeyword } from '../types';
 
 export const getImagePath = (imageId: string): string => `/data/${imageId}.jpg`;
@@ -26,7 +26,7 @@ export const splitKeywordsInCategories = (
 ): CategoryData => {
   let categoryData: CategoryData = {};
   imageData.forEach((entry) => {
-    const category = Object.entries(KEYWORDS_BY_CATEGORY).find((keywords) =>
+    const category = Object.entries(keywordsByCategory).find((keywords) =>
       keywords[1].includes(entry.keyword),
     )?.[0];
     if (category) {
