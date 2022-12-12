@@ -30,6 +30,7 @@
     "Back": "Back",
     "Confidence": "Confidence",
     "WORDCLOUD_DESCRIPTION": "The word cloud below, shows the words extracted from the image. Color represents the associated category. Size of the word represents importance.",
-    "SIMPLE_LOCAL_DESCRIPTION": "The expandable menus below group extracted words from the image into categories. Click on one to open it and have a look at the graph representing the extracted words and their confidence."
+    "SIMPLE_LOCAL_DESCRIPTION": "The expandable menus below group extracted words from the image into categories. Click on one to open it and have a look at the graph representing the extracted words and their confidence.",
+    "DYNAMIC_LOCAL_DESCRIPTION": "The vizualisation below is interactive and you can zoom in by clicking a circle. Big circles are categories and circles inside them are words extracted from the image."
   }
 }
