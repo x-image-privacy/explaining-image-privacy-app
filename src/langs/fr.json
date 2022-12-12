@@ -28,6 +28,7 @@
     "EMOTIONS_CATEGORY_CONTENT": "Cette catégorie fait référence à une réaction mentale spontanée, comme la joie, la tristesse, la haine et l'amour.",
     "Select an image": "Sélectionnez une image",
     "Back": "Retour",
-    "Confidence": "Confiance"
+    "Confidence": "Confiance",
+    "WORDCLOUD_DESCRIPTION": "Le nuage de mots ci-dessous montre les mots clés extraits de l'image. Les couleurs associent les mots à une catégorie."
   }
 }

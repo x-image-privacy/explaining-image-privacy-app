@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 
-import { Container } from '@chakra-ui/react';
+import { Container, Divider } from '@chakra-ui/react';
 
 import DisplayImage from '../components/DisplayImage';
 import DynamicLocal from '../components/DynamicLocal';
@@ -44,7 +44,7 @@ const DynamicLocalPage: FC = () => {
       <Container maxW="xxl">
         <DynamicLocal data={imageCategories1} />
       </Container>
-
+      <Divider marginY={6} />
       <DisplayImage imageId={imageId2} mt={2} />
       <Container maxW="xxl">
         <DynamicLocal data={imageCategories2} />

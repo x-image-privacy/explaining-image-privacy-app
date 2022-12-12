@@ -28,6 +28,7 @@
     "EMOTIONS_CATEGORY_CONTENT": "This category talks about a spontaneous mental reaction, such as joy, sorrow, hate, and love.",
     "Select an image": "Select an image",
     "Back": "Back",
-    "Confidence": "Confidence"
+    "Confidence": "Confidence",
+    "WORDCLOUD_DESCRIPTION": "The word cloud below, shows the words extracted from the image. Color represents the associated category."
   }
 }
