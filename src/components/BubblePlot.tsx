@@ -13,7 +13,10 @@ import { BubbleCategory } from '../types';
 // website examples showcase many properties,
 // you'll often use just a few of them.
 
-type Props = { data: BubbleCategory };
+type Props = {
+  data: BubbleCategory;
+};
+
 const BubblePlot: FC<Props> = ({ data }) => {
   const [zoomedId, setZoomedId] = useState<string | null>(null);
 
@@ -56,10 +59,11 @@ const BubblePlot: FC<Props> = ({ data }) => {
         },
         {
           id: 'none',
-          background: 'none',
+          background: '#C1E7E3',
           type: 'patternLines',
-          color: 'none',
-          borderColor: 'gray',
+          color: '#C1E7E3',
+          borderColor: '#C1E7E3',
+          spacing: 2,
         },
       ]}
       colorBy="id"
