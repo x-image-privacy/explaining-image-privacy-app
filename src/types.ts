@@ -35,3 +35,9 @@ export type CategoryData = {
 } & {
   [key: string]: ImageKeyword[];
 };
+
+export type WordCloudKeyword = {
+  value: string;
+  count: number;
+  color: string;
+};

@@ -13,6 +13,7 @@ import {
 import DynamicLocalPage from './pages/DynamicLocalPage';
 import MainPage from './pages/MainPage';
 import SimpleLocalPage from './pages/SimpleLocalPage';
+import WordCloudLocalPage from './pages/WordCloudLocalPage';
 import theme from './theme';
 
 const root = ReactDOM.createRoot(
@@ -27,7 +28,10 @@ root.render(
           <Route index element={<MainPage />} />
           <Route path={SIMPLE_LOCAL_ROUTE} element={<SimpleLocalPage />} />
           <Route path={DYNAMIC_LOCAL_ROUTE} element={<DynamicLocalPage />} />
-          <Route path={WORD_CLOUD_LOCAL_ROUTE} element={<DynamicLocalPage />} />
+          <Route
+            path={WORD_CLOUD_LOCAL_ROUTE}
+            element={<WordCloudLocalPage />}
+          />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

@@ -1,4 +1,5 @@
 import Papa from 'papaparse';
+import randomColor from 'randomcolor';
 
 import keywordsByCategory from '../data/category_words.json';
 import {
@@ -7,6 +8,7 @@ import {
   CategoryData,
   CategoryNames,
   ImageKeyword,
+  WordCloudKeyword,
 } from '../types';
 
 export const getImagePath = (imageId: string): string => `/data/${imageId}.jpg`;
@@ -61,4 +63,23 @@ export const transformDataToBubbles = (
     name: 'image',
     children: bubbles,
   };
+};
+
+export const transformDataToWordCloud = (
+  imageCategories: CategoryData,
+): WordCloudKeyword[] => {
+  const wordcloud: WordCloudKeyword[] = Object.entries(imageCategories)
+    .filter(([cat]) => cat !== CategoryNames.NotApplicable)
+    .reduce(
+      (acc: WordCloudKeyword[], [cat, keywords]) => [
+        ...acc,
+        ...keywords.map((k) => ({
+          value: k.keyword,
+          count: k.confidence * 100,
+          color: randomColor({ seed: cat, luminosity: 'dark' }),
+        })),
+      ],
+      [],
+    );
+  return wordcloud;
 };

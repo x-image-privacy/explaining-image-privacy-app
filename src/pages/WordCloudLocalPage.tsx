@@ -3,10 +3,14 @@ import { FC, useEffect, useState } from 'react';
 import { Container } from '@chakra-ui/react';
 
 import DisplayImage from '../components/DisplayImage';
-import DynamicLocal from '../components/DynamicLocal';
+import WordCloudLocal from '../components/WordCloudLocal';
 import imageLabels from '../data/image_label.json';
 import { CategoryData } from '../types';
-import { fetchImageData, splitKeywordsInCategories } from '../utils/imageData';
+import {
+  fetchImageData,
+  splitKeywordsInCategories,
+  transformDataToWordCloud,
+} from '../utils/imageData';
 
 const WordCloudLocalPage: FC = () => {
   const Image1 = Object.keys(imageLabels)[1];
@@ -39,11 +43,11 @@ const WordCloudLocalPage: FC = () => {
   );
 
   return (
-    <Container w="100vw" p={3}>
+    <Container maxW="100vw" p={3} centerContent>
       <DisplayImage imageId={imageId1} mt={2} />
-      <DynamicLocal data={imageCategories1} />
+      <WordCloudLocal data={transformDataToWordCloud(imageCategories1)} />
       <DisplayImage imageId={imageId2} mt={2} />
-      <DynamicLocal data={imageCategories2} />
+      <WordCloudLocal data={transformDataToWordCloud(imageCategories2)} />
     </Container>
   );
 };

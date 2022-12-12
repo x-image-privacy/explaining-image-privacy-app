@@ -4906,6 +4906,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/randomcolor@npm:^0.5.7":
+  version: 0.5.7
+  resolution: "@types/randomcolor@npm:0.5.7"
+  checksum: dd00a7ecbd58ce1539eb83640d1cfa2a0526911f8c4fffed538bbf0d8d94eaad698fda6bffd09d74bf904a35a8782b1474491dedeb366512b993812503fa2edf
+  languageName: node
+  linkType: hard
+
 "@types/range-parser@npm:*":
   version: 1.2.4
   resolution: "@types/range-parser@npm:1.2.4"
@@ -4919,6 +4926,15 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: e744e3feba25fc43733289d4df4d9c0e59fcca7f34e8c89d75f81a339accb2bd70236d69382d47d2c0ad06a1529b2e56aa6171fe175854d60e07156ddceedfcb
+  languageName: node
+  linkType: hard
+
+"@types/react-tagcloud@npm:^1.1.7":
+  version: 1.1.7
+  resolution: "@types/react-tagcloud@npm:1.1.7"
+  dependencies:
+    "@types/react": "*"
+  checksum: d44e6bf47b234ba6f62eec0742e26ed6f5e4581eb311ce4ee9fd402addc6cf71d304cd90a507767c86cf95bad3db130a1fa090d669ebea05ff0d28b58c4295ab
   languageName: node
   linkType: hard
 
@@ -9471,8 +9487,10 @@ __metadata:
     "@types/jest": 27.0.1
     "@types/node": 16.7.13
     "@types/papaparse": 5.3.5
+    "@types/randomcolor": ^0.5.7
     "@types/react": 18.0.25
     "@types/react-dom": 18.0.9
+    "@types/react-tagcloud": ^1.1.7
     "@typescript-eslint/eslint-plugin": 5.44.0
     "@typescript-eslint/parser": 5.44.0
     commitlint: 17.3.0
@@ -9495,6 +9513,7 @@ __metadata:
     papaparse: 5.3.2
     prettier: 2.8.0
     pretty-quick: 3.1.3
+    randomcolor: ^0.6.2
     react: 18.2.0
     react-dom: 18.2.0
     react-i18next: 12.0.0
@@ -9502,6 +9521,7 @@ __metadata:
     react-router: ^6.4.3
     react-router-dom: ^6.4.3
     react-scripts: 5.0.1
+    react-tagcloud: ^2.3.1
     recharts: ^2.1.16
     standard-version: 9.5.0
     typescript: 4.9.3
@@ -14948,6 +14968,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"randomcolor@npm:^0.6.2":
+  version: 0.6.2
+  resolution: "randomcolor@npm:0.6.2"
+  checksum: 539345c0289f7c52ffd8486e61231e19ccc40b1c4ab9c15594f20a2773b71a9317e0cc8b756160fc8a678ace9ed1e96a8ac90346b2c34c64dfd5acad91f9a73d
+  languageName: node
+  linkType: hard
+
 "range-parser@npm:^1.2.1, range-parser@npm:~1.2.1":
   version: 1.2.1
   resolution: "range-parser@npm:1.2.1"
@@ -15298,6 +15325,20 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 7ee8ef3aab74c7ae1d70ff34a27643d11ba1a8d62d072c767827d9ff9a520905223e567002e0bf6c772929d8ea1c781a3ba0cc4a563e92b1e3dc2eaa817ecbe8
+  languageName: node
+  linkType: hard
+
+"react-tagcloud@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "react-tagcloud@npm:2.3.1"
+  dependencies:
+    prop-types: ^15.6.2
+    randomcolor: ^0.6.2
+    seedrandom: ^3.0.5
+    shuffle-array: ^1.0.1
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: ab0c4b656b1e697f3ef2d8d7b2d85d3917742efddc204f513ebc2067a19605398895aaf419cde489dc6fb6a8efcf69a2f619cbade99702f61ea22ddb39e6325e
   languageName: node
   linkType: hard
 
@@ -15980,6 +16021,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"seedrandom@npm:^3.0.5":
+  version: 3.0.5
+  resolution: "seedrandom@npm:3.0.5"
+  checksum: 728b56bc3bc1b9ddeabd381e449b51cb31bdc0aa86e27fcd0190cea8c44613d5bcb2f6bb63ed79f78180cbe791c20b8ec31a9627f7b7fc7f476fd2bdb7e2da9f
+  languageName: node
+  linkType: hard
+
 "select-hose@npm:^2.0.0":
   version: 2.0.0
   resolution: "select-hose@npm:2.0.0"
@@ -16143,6 +16191,13 @@ __metadata:
   version: 1.7.3
   resolution: "shell-quote@npm:1.7.3"
   checksum: aca58e73a3a5d933d02e0bdddedc53ee14f7c2ec264f97ac915b9d4482d077a38e422aa664631d60a672cd3cdb4054eb2e6c0303f54882453dacb6483e482d34
+  languageName: node
+  linkType: hard
+
+"shuffle-array@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "shuffle-array@npm:1.0.1"
+  checksum: 9f299ad69622f0f8049bb02d287287f46d4d96299b20010ce072b1b00adbe0dbb5fb488dd136bcc2f1858f6bbbe9b939bdf35fc379c96a3e1000da77fd29e2eb
   languageName: node
   linkType: hard
 
