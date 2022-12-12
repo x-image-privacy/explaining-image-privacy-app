@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Accordion, Box } from '@chakra-ui/react';
+import { Accordion, Container } from '@chakra-ui/react';
 
-import { CategoryData } from '../types';
+import { CategoryData, CategoryNames } from '../types';
 import CategoryItem from './CategoryItem';
 import HistogramBar from './HistogramBar';
 
@@ -15,10 +15,11 @@ const SimpleLocal: FC<Props> = ({ data }) => {
   const { t } = useTranslation();
 
   return (
-    <Box w="100%" p={1}>
+    <Container maxW="80%" p={3}>
       <Accordion allowToggle>
         {Object.keys(data)
           .sort()
+          .filter((cat) => cat !== CategoryNames.NotApplicable)
           .map((cat) => (
             <CategoryItem
               key={cat}
@@ -33,7 +34,7 @@ const SimpleLocal: FC<Props> = ({ data }) => {
             </CategoryItem>
           ))}
       </Accordion>
-    </Box>
+    </Container>
   );
 };
 

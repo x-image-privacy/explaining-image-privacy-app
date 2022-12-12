@@ -15,6 +15,9 @@ export const getImagePath = (imageId: string): string => `/data/${imageId}.jpg`;
 export const getImageDataPath = (imageId: string): string =>
   `/data/${imageId}.csv`;
 
+export const getCategoryColor = (cat: string): string =>
+  randomColor({ seed: cat, luminosity: 'dark' });
+
 export const fetchImageData = (
   imageId: string,
   callback: (data: ImageKeyword[]) => void,
@@ -37,7 +40,7 @@ export const splitKeywordsInCategories = (
     const category = Object.entries(keywordsByCategory).find((keywords) =>
       keywords[1].includes(entry.keyword),
     )?.[0];
-    if (category) {
+    if (category && category !== CategoryNames.NotApplicable) {
       const previousCatData = categoryData[category];
       categoryData = {
         ...categoryData,
@@ -76,7 +79,7 @@ export const transformDataToWordCloud = (
         ...keywords.map((k) => ({
           value: k.keyword,
           count: k.confidence * 100,
-          color: randomColor({ seed: cat, luminosity: 'dark' }),
+          color: getCategoryColor(cat),
         })),
       ],
       [],

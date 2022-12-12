@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 
-import { Container } from '@chakra-ui/react';
+import { Container, Divider } from '@chakra-ui/react';
 
 import DisplayImage from '../components/DisplayImage';
 import SimpleLocal from '../components/SimpleLocal';
@@ -41,13 +41,10 @@ const SimpleLocalPage: FC = () => {
   return (
     <Container maxW="100vw" centerContent p={3}>
       <DisplayImage imageId={imageId1} mt={2} />
-      <Container maxW="xl">
-        <SimpleLocal data={imageCategories1} />
-      </Container>
+      <SimpleLocal data={imageCategories1} />
+      <Divider marginY={6} />
       <DisplayImage imageId={imageId2} mt={2} />
-      <Container maxW="xl">
-        <SimpleLocal data={imageCategories2} />
-      </Container>
+      <SimpleLocal data={imageCategories2} />
     </Container>
   );
 };

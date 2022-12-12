@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 
-import { Container } from '@chakra-ui/react';
+import { Container, Divider } from '@chakra-ui/react';
 
 import DisplayImage from '../components/DisplayImage';
 import WordCloudLocal from '../components/WordCloudLocal';
@@ -45,9 +45,16 @@ const WordCloudLocalPage: FC = () => {
   return (
     <Container maxW="100vw" p={3} centerContent>
       <DisplayImage imageId={imageId1} mt={2} />
-      <WordCloudLocal data={transformDataToWordCloud(imageCategories1)} />
+      <WordCloudLocal
+        data={transformDataToWordCloud(imageCategories1)}
+        categories={Object.keys(imageCategories1)}
+      />
+      <Divider marginY={6} />
       <DisplayImage imageId={imageId2} mt={2} />
-      <WordCloudLocal data={transformDataToWordCloud(imageCategories2)} />
+      <WordCloudLocal
+        data={transformDataToWordCloud(imageCategories2)}
+        categories={Object.keys(imageCategories2)}
+      />
     </Container>
   );
 };

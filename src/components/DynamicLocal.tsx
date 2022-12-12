@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Accordion, Box, HStack } from '@chakra-ui/react';
 
 import { GRAPH_CONTAINER_CY } from '../config/selectors';
-import { CategoryData } from '../types';
+import { CategoryData, CategoryNames } from '../types';
 import { transformDataToBubbles } from '../utils/imageData';
 import BubblePlot from './BubblePlot';
 import CategoryItem from './CategoryItem';
@@ -15,12 +15,14 @@ const DynamicLocal: FC<Props> = ({ data }) => {
   return (
     <HStack id={GRAPH_CONTAINER_CY} spacing={2} width="100%">
       <Box w="50%" h="600px" p={1} display="flex" justifyContent="center">
+        {/* todo: have min width */}
         <BubblePlot data={transformDataToBubbles(data)} />
       </Box>
       <Box w="50%" p={1}>
         <Accordion allowToggle>
           {Object.keys(data)
             .sort()
+            .filter((cat) => cat !== CategoryNames.NotApplicable)
             .map((cat) => (
               <CategoryItem
                 key={cat}
