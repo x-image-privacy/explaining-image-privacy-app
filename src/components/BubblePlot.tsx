@@ -4,6 +4,7 @@ import { ResponsiveCirclePacking } from '@nivo/circle-packing';
 
 import { FC, useState } from 'react';
 
+import { IMAGE_ID } from '../config/constants';
 import { BubbleCategory } from '../types';
 
 // make sure parent container have a defined height when using
@@ -23,23 +24,21 @@ const BubblePlot: FC<Props> = ({ data }) => {
       onClick={(node: { id: string | null }) => {
         setZoomedId(zoomedId === node.id ? null : node.id);
       }}
+      colors={{ scheme: 'category10' }}
       data={data}
       margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
       id="name"
-      value="value"
-      // colors={(d) => d.data.color || '#FF0000'}
+      valueFormat={(value) => `${value}`}
       childColor={{
         from: 'color',
-        modifiers: [['brighter', 0.4]],
+        modifiers: [['brighter', 0.6]],
       }}
       padding={24}
       enableLabels
       labelsFilter={(n: { node: { depth: number } }) => n.node.depth === 2}
-      labelsSkipRadius={10}
-      labelTextColor={{
-        from: 'color',
-        modifiers: [['darker', 2]],
-      }}
+      labelsSkipRadius={5}
+      labelTextColor="#000"
+      // eslint-disable-next-line react/no-unstable-nested-components
       borderWidth={1}
       borderColor={{
         from: 'color',
@@ -55,13 +54,45 @@ const BubblePlot: FC<Props> = ({ data }) => {
           lineWidth: 5,
           spacing: 8,
         },
+        {
+          id: 'none',
+          background: 'none',
+          type: 'patternLines',
+          color: 'none',
+          borderColor: 'gray',
+        },
       ]}
+      colorBy="id"
+      inheritColorFromParent
+      // eslint-disable-next-line react/no-unstable-nested-components
+      tooltip={({ id, value }) =>
+        id !== IMAGE_ID ? (
+          <div
+            style={{
+              backgroundColor: '#fff',
+              padding: '2px 8px',
+              borderRadius: '4px',
+              border: '1px solid silver',
+            }}
+          >
+            {value <= 1 ? (
+              <div style={{ fontSize: '0.85rem' }}>
+                {id}: <strong>{value}</strong>
+              </div>
+            ) : (
+              <div>{id}</div>
+            )}
+          </div>
+        ) : (
+          <div> </div>
+        )
+      }
       fill={[
         {
           match: {
-            depth: 1,
+            depth: 0,
           },
-          id: 'lines',
+          id: 'none',
         },
       ]}
     />

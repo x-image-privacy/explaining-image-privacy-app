@@ -14,11 +14,17 @@ const DynamicLocal: FC<Props> = ({ data }) => {
   const { t } = useTranslation();
   return (
     <HStack id={GRAPH_CONTAINER_CY} spacing={2} width="100%">
-      <Box w="50%" h="600px" p={1} display="flex" justifyContent="center">
-        {/* todo: have min width */}
+      <Box
+        flex={1}
+        h="600px"
+        p={1}
+        display="flex"
+        justifyContent="center"
+        minWidth={500}
+      >
         <BubblePlot data={transformDataToBubbles(data)} />
       </Box>
-      <Box w="50%" p={1}>
+      <Box flex={1} p={1}>
         <Accordion allowToggle>
           {Object.keys(data)
             .sort()

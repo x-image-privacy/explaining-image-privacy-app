@@ -2,10 +2,11 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { TagCloud } from 'react-tagcloud';
 
-import { Box, Container, Text } from '@chakra-ui/react';
+import { Box, Container } from '@chakra-ui/react';
 
 import { WordCloudKeyword } from '../types';
 import WordCloudLegend from './WordCloudLegend';
+import VizualisationDescription from './common/VizualisationDescription';
 
 type Props = {
   data: WordCloudKeyword[];
@@ -15,9 +16,9 @@ const WordCloudLocal: FC<Props> = ({ data, categories }) => {
   const { t } = useTranslation();
   return (
     <Container maxW="80vw" padding="3" centerContent gap={6}>
-      <Text as="i" color="gray">
+      <VizualisationDescription>
         {t('WORDCLOUD_DESCRIPTION')}
-      </Text>
+      </VizualisationDescription>
       <Box
         as={TagCloud}
         sx={{ textAlign: 'center' }}
