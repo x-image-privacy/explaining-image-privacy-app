@@ -6,6 +6,7 @@ import { Accordion, Container } from '@chakra-ui/react';
 import { CategoryData, CategoryNames } from '../types';
 import CategoryItem from './CategoryItem';
 import HistogramBar from './HistogramBar';
+import VizualisationDescription from './common/VizualisationDescription';
 
 type Props = {
   data: CategoryData;
@@ -15,8 +16,11 @@ const SimpleLocal: FC<Props> = ({ data }) => {
   const { t } = useTranslation();
 
   return (
-    <Container maxW="80%" p={3}>
-      <Accordion allowToggle>
+    <Container maxW="80%" p={3} centerContent gap={4}>
+      <VizualisationDescription>
+        {t('SIMPLE_LOCAL_DESCRIPTION')}
+      </VizualisationDescription>
+      <Accordion allowToggle w="100%">
         {Object.keys(data)
           .sort()
           .filter((cat) => cat !== CategoryNames.NotApplicable)

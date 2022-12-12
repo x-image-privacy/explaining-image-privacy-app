@@ -1,6 +1,8 @@
+import { t } from 'i18next';
 import Papa from 'papaparse';
 import randomColor from 'randomcolor';
 
+import { IMAGE_ID, MAX_NUMBER_OF_WORDS_BUBBLE } from '../config/constants';
 import keywordsByCategory from '../data/category_words.json';
 import {
   BubbleCategory,
@@ -54,16 +56,20 @@ export const splitKeywordsInCategories = (
 export const transformDataToBubbles = (
   imageCategories: CategoryData,
 ): BubbleCategory => {
-  const bubbles: Category[] = Object.entries(imageCategories)
-    .filter(([cat]) => cat !== CategoryNames.NotApplicable)
-    .map(([cat, keywords]) => ({
-      // todo: add nice categories
-      name: cat,
-      children: keywords.map((k) => ({ name: k.keyword, value: k.confidence })),
-    }));
+  const bubbles: Category[] = Object.entries(imageCategories).map(
+    ([cat, keywords]) => ({
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      name: t(`${cat.toUpperCase()}_CATEGORY`),
+      children: keywords
+        .map((k) => ({ name: k.keyword, value: k.confidence }))
+        .sort((a, b) => (a.value > b.value ? -1 : 1))
+        .slice(0, MAX_NUMBER_OF_WORDS_BUBBLE),
+    }),
+  );
 
   return {
-    name: 'image',
+    name: IMAGE_ID,
     children: bubbles,
   };
 };
@@ -71,18 +77,16 @@ export const transformDataToBubbles = (
 export const transformDataToWordCloud = (
   imageCategories: CategoryData,
 ): WordCloudKeyword[] => {
-  const wordcloud: WordCloudKeyword[] = Object.entries(imageCategories)
-    .filter(([cat]) => cat !== CategoryNames.NotApplicable)
-    .reduce(
-      (acc: WordCloudKeyword[], [cat, keywords]) => [
-        ...acc,
-        ...keywords.map((k) => ({
-          value: k.keyword,
-          count: k.confidence * 100,
-          color: getCategoryColor(cat),
-        })),
-      ],
-      [],
-    );
+  const wordcloud: WordCloudKeyword[] = Object.entries(imageCategories).reduce(
+    (acc: WordCloudKeyword[], [cat, keywords]) => [
+      ...acc,
+      ...keywords.map((k) => ({
+        value: k.keyword,
+        count: k.confidence * 100,
+        color: getCategoryColor(cat),
+      })),
+    ],
+    [],
+  );
   return wordcloud;
 };
